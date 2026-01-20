@@ -40,6 +40,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>NUESTRO EVEE</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function cerrarVentana() {
+    document.querySelector(".card").style.display = "none";
+}    
+</script>
 <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJNTRHHF"
@@ -57,6 +62,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="contenedor">
     <div class="card">
+
+        <button class="cerrar" onclick="cerrarVentana()">X</button>
+
+
         <header>
         <h1> NUESTRO EVEE </h1>
         <p> Aquí podrás vender o
