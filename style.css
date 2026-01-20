@@ -68,8 +68,18 @@ color: var(--amarillo-pokemon);
 text-shadow: 3px 3px var(--azul-pokemon);
 text-transform: uppercase;
 letter-spacing: 2px;
+margin: 0;
+
+}
+h1 {
+    font-size: 3rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+    color: var(--blanco-nube);
+    text-shadow: 2px 2px var(--azul-oscuro);
+}
 
 .btn-pokemon {
 background-color: var(--amarillo-pokemon);
