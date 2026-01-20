@@ -1,60 +1,98 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+:root {
+--rojo-pokemon: #ff1c1c;
+--amarillo-pokemon: #ffcb05;
+--azul-pokemon: #3d7dca;
+--azul-oscuro: #0a285f;
+--blanco-nube: #f0f0f0;
+--negro-carbon: #212121;
 }
 
 body {
-font-family: 'Segoe UI', sans-serif;
-background-color: #f4f7f6;
-color: #272626;
+margin: 0;
+font-family: 'Montserrat', sans-serif;
+background-color: var(--negro-carbon);
+color: var(--blanco-nube);
 display: flex;
 flex-direction: column;
 min-height: 100vh;
 }
 
-.contenedor {
-max-width: 900px;
-margin: 20px auto;
-background: white;
-padding: 40px;
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
 nav {
-background: #2c3e50;
+background-color: var(--rojo-pokemon);
 padding: 1rem;
-}
-
-nav ul {
-list-style: none;
+border-bottom: 5px solid var(--azul-oscuro);
 display: flex;
 justify-content: center;
+gap: 30px;
 }
 
 nav a {
 color: white;
 text-decoration: none;
-margin: 0 15px;
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.3s;
 }
 
-.boton-accion {
-background-color: #27ae60;
-color: white;
-padding: 10px 20px;
+nav a:hover {
+color: var(--amarillo-pokemon);
+text-shadow: 2px 2px var(--azul-oscuro);
+}
+
+
+.container {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+.card {
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+border: 2px solid var(--azul-pokemon);
+border-radius: 20px;
+padding: 40px;
+max-width: 500px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+color: var(--amarillo-pokemon);
+text-shadow: 3px 3px var(--azul-pokemon);
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+
+.btn-pokemon {
+background-color: var(--amarillo-pokemon);
+color: var(--azul-oscuro);
+padding: 12px 30px;
 border: none;
-border-radius: 5px;
+border-radius: 50px; 
+font-weight: bold;
 cursor: pointer;
-margin-top: 15px;
+text-transform: uppercase;
+transition: all 0.3s ease;
+border: 3px solid var(--azul-oscuro);
 }
 
-.boton-accion:hover {
-background-color: #219150;
+.btn-pokemon:hover {
+background-color: var(--rojo-pokemon);
+color: white;
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(255, 28, 28, 0.4);
 }
+
 
 footer {
-text-align: center;
+background-color: #111;
 padding: 20px;
-margin-top: auto;
+text-align: center;
+font-size: 0.8rem;
+color: #666;
 }
