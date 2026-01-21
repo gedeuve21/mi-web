@@ -3,18 +3,21 @@
     --amarillo-pokemon: #ffcb05;
     --azul-pokemon: #3d7dca;
     --azul-oscuro: #0a285f;
-    --blanco-nube: #000000;
+    --blanco-nube: #ffffff;
     --negro-carbon: #212121;
 }
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' , 
+sans-serif;
     background-color: var(--negro-carbon);
     color: var(--blanco-nube);
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
+
 }
 
 
