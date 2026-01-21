@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <script>
 function cerrarVentana() {
-    document.querySelector(".card").style.display = "none";
+    document.querySelector(".card").style.display = "block";
 }    
 </script>
 <body>
@@ -76,7 +76,8 @@ cartas.</p>
 
         <section>
             <h2> Sobre nosotros </h2>
-            <button class="boton-accion">Saber más</button>
+            <button class="boton-accion"
+            onclick="abrirVentana()">Saber más</button>
             <button class="clase-de-tu-boton"
             onclick="cerrarVentana()">Cerrar</button>
         </section> 
@@ -86,21 +87,6 @@ cartas.</p>
 <footer>
 <p>&copy; 2026 GDVE21 </p>
 </footer>
-
-<script>
-    const botonCerrar = 
-document.getElementById('btnCerrar')
-;
-    constVentanaModal =
-document.querySelector('.nombre-de-
-tu-ventana-modal');
-
-botonCerrar.addEventListener('click'
-, () => {
-    ventanaModal.style.display = 
-'none';
-  });
-</script>
 
 </body>
 </html>
