@@ -69,7 +69,7 @@ nav a:hover {
 
 .cerrar {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 15px;
     background: none;
     border: none;
@@ -77,7 +77,6 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     color: var(--amarillo-pokemon);
-    transitiOn: 0.3s;
 }
 
 .cerrar:hover {
