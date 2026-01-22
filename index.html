@@ -47,20 +47,29 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WJNTRHHF');</script>
+    })(window,document,'script','dataLayer','GTM-WJNTRHHF');
+
+</script>
 
 <script>
 
     function cerrarVentana() {
-
-        document.querySelector(".card").style.display = "none";
+        const tarjeta = document.querySelector(".card");
+        if(tarjeta) {
+            tarjeta.style.display = "none";
+        }
     }
 
     function abrirVentana() {
-
-        document.querySelector(".card").style.display = "block";
+        const tarjeta = document.querySelector(".card");
+        if(tarjeta) {
+            tarjeta.style.display = "block";
+        }
     }
-    </script>
+     
+    
+</script>
+
 </head>
 
 <body>
