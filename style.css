@@ -55,9 +55,10 @@ nav a:hover {
 .grupo-botones {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     width: 100%;
+
 }    
 
 .card {
@@ -120,7 +121,6 @@ h2 {
 .btn-pokemon {
     background-color: var(--amarillo-pokemon);
     color: var(--azul-oscuro);
-    padding: 0;
     border: 4px solid var(--azul-oscuro);
     border-radius: 25px; 
     font-weight: bold;
@@ -132,11 +132,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     text-decoration: none;
-    min-width: 200px;
-    height: 55px;
-    width: 250px;
+    width: 250px;          
+    height: 55px;         
+    box-sizing: border-box; 
+    padding: 0;             
+    margin: 0;             
 }
 
 .btn-pokemon:hover {
