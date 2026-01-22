@@ -15,7 +15,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
+
     body {
         margin: 0;
         display: flex;
@@ -29,14 +29,28 @@
         align-items: center;
         justify-content: center;
     }
+
+    .card h1, .card h2, .card p {
+        color: #000000;
+    }
+
+    .boton-accion {
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+
 </style>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WJNTRHHF');</script>
 <script>
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WJNTRHHF');</script>
+
+<script>
+
     function cerrarVentana() {
 
         document.querySelector(".card").style.display = "none";
@@ -44,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     function abrirVentana() {
 
-        alert("¡Próximamente más información sobre Evee!");
+        document.querySelector(".card").style.display = "block";
     }
     </script>
 </head>
@@ -66,20 +80,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <button class="cerrar" onclick="cerrarVentana()">X</button>
 
 <header>
+
     <h1> NUESTRO EVEE </h1>
     <p>Aquí podrás vender o comprar cualquier carta que desees.</p>
     <p>También tenemos servicio de verificación y gradeo de cartas.</p>
+
 </header>
 
 <section>
-<h2> Sobre nosotros </h2>
-<button class="boton-accion" onclick="abrirVentana()">Saber más</button>
+
+    <h2> Sobre nosotros </h2>
+    <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
+
 </section>
 </div>
 </main>
 
 <footer>
-<p>&copy; 2026 GDVE21 </p>
+    <p>&copy; 2026 GDVE21 </p>
 </footer>
 
 </body>
