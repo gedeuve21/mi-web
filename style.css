@@ -3,7 +3,7 @@
     --amarillo-pokemon: #ffcb05;
     --azul-pokemon: #3d7dca;
     --azul-oscuro: #0a285f;
-    --blanco-nube: #000000;
+    --blanco-nube: #f0e7e7;
     --negro-carbon: #212121;
 }
 
@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-family: 'Montserrat' , 
     sans-serif;
-    background-color: var(--negro-carbon);
+    background-color: var(--blanco-nube);
     color: var(--blanco-nube);
     display: flex;
     flex-direction: column;
