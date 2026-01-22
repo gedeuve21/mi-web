@@ -150,9 +150,9 @@ h2 {
 }
 
 footer {
-    background-color: #111;
+    background-color: transparent;
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
-    color: #666;
+    
 }
