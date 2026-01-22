@@ -43,7 +43,6 @@ nav a:hover {
     text-shadow: 2px 2px var(--azul-oscuro);
 }
 
-
 .container {
     display: flex;
     align-items: center;
@@ -51,6 +50,7 @@ nav a:hover {
     flex-direction: column;
     gap: 20px;
     min-height: 100vh;
+    text-align: center;
 }
 
 .card {
