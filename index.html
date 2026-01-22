@@ -53,15 +53,22 @@
 
 <script>
 
-    function abrirVentana() {}
+    function abrirVentana() {
 
-        document.getElementById ("mi-modal").style.display ="block";
-        document.getElementById ("seccion-inicio").style.display ="none";
+        var ventana =
+        document.getElementById("miVentanaEmergente");
+        if(ventana) {
+            ventana.style.display = "block";
+        }
+    }    
 
     function cerrarVentana() {
 
-        document.getElementById("mi-modal").style.display ="none";
-        document.getElementById("seccion-inicio").style.display ="block"
+        var ventana = 
+        document.getElementById("miVentanaEmergente");
+        if(ventana) {
+            ventana.style.display = "none";
+        }
     }
      
     
