@@ -112,7 +112,7 @@ h2 {
 .btn-pokemon {
     background-color: var(--amarillo-pokemon);
     color: var(--azul-oscuro);
-    padding: 15px 40px;
+    padding: 20px 50px;
     border: 4px solid var(--azul-oscuro);
     border-radius: 50px; 
     font-weight: bold;
