@@ -53,18 +53,15 @@
 
 <script>
 
-    function cerrarVentana() {
-        const tarjeta = document.querySelector(".card");
-        if(tarjeta) {
-            tarjeta.style.display = "none";
-        }
-    }
+    function abrirVentana() {}
 
-    function abrirVentana() {
-        const tarjeta = document.querySelector(".card");
-        if(tarjeta) {
-            tarjeta.style.display = "block";
-        }
+        document.getElementById ("info-emergente").style.display ="block";
+        document.getElementById ("btn-principal").style.display ="none";
+
+    function cerrarVentana() {
+
+        document.getElementById("info-emergente").style.display ="none";
+        document.getElementById("btn-principal").style.display ="block"
     }
      
     
@@ -85,6 +82,7 @@
 </nav>
 
 <main class="contenedor">
+
 <div class="card">
 <button class="cerrar" onclick="cerrarVentana()">X</button>
 
@@ -96,13 +94,13 @@
 
 </header>
 
-<section>
+    <section>
 
-    <h2> Sobre nosotros </h2>
-    <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
+      <h2> Sobre nosotros </h2>
+      <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
 
-</section>
-</div>
+    </section>
+  </div>
 </main>
 
 <footer>
