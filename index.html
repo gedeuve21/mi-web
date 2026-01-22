@@ -88,26 +88,23 @@
     </ul>
 </nav>
 
+
 <main class="contenedor">
+  <section>
+    <h1>NUESTRO EVEE</h1>
+    <h2>Sobre nosotros</h2>
+    <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
+  </section>
 
-<div class="card">
-<button class="cerrar" onclick="cerrarVentana()">X</button>
+<div id="miVentanaEmergente" class="card" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+  <button class="cerrar" onclick="cerrarVentana()">X</button>
+  <div class="contenido">
+  <h2>Información adicional</h2>
+  <p>Este es el texto que querías desplegar.</p>
+  <button class="boton-contacto">Ir a Contacto</button>
+  <p onclick="cerrarVentana()" style="cursor:pointer; color: gray; margin-top: 10px;">Cerrar</p>
+</div>
 
-<header>
-
-    <h1> NUESTRO EVEE </h1>
-    <p>Aquí podrás vender o comprar cualquier carta que desees.</p>
-    <p>También tenemos servicio de verificación y gradeo de cartas.</p>
-
-</header>
-
-    <section>
-
-      <h2> Sobre nosotros </h2>
-      <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
-
-    </section>
-  </div>
 </main>
 
 <footer>
