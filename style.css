@@ -50,7 +50,7 @@ nav a:hover {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .card {
