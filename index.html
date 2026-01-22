@@ -8,37 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+<style>
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        .contenedor {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    .contenedor {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WJNTRHHF');</script>
-    <script>
-        function cerrarVentana() {
-            // Esto oculta la tarjeta
-            document.querySelector(".card").style.display = "none";
-        }    
-        
-        function abrirVentana() {
-            // Esto por si quieres que el botón "Saber más" haga algo
-            alert("¡Próximamente más información sobre Evee!");
-        }
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJNTRHHF');</script>
+<script>
+    function cerrarVentana() {
+
+        document.querySelector(".card").style.display = "none";
+    }
+
+    function abrirVentana() {
+
+        alert("¡Próximamente más información sobre Evee!");
+    }
     </script>
 </head>
 
@@ -46,35 +53,35 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJNTRHHF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="cartas.html">Cartas</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="cartas.html">Cartas</a></li>
+    </ul>
+</nav>
 
-    <main class="contenedor">
-        <div class="card">
-            <button class="cerrar" onclick="cerrarVentana()">X</button>
+<main class="contenedor">
+<div class="card">
+<button class="cerrar" onclick="cerrarVentana()">X</button>
 
-            <header>
-                <h1> NUESTRO EVEE </h1>
-                <p>Aquí podrás vender o comprar cualquier carta que desees.</p>
-                <p>También tenemos servicio de verificación y gradeo de cartas.</p>
-            </header>
+<header>
+    <h1> NUESTRO EVEE </h1>
+    <p>Aquí podrás vender o comprar cualquier carta que desees.</p>
+    <p>También tenemos servicio de verificación y gradeo de cartas.</p>
+</header>
 
-            <section>
-                <h2> Sobre nosotros </h2>
-                <button class="boton-accion" onclick="abrirVentana()">Saber más</button>
-                <button class="clase-de-tu-boton" onclick="cerrarVentana()">Cerrar</button>
-            </section> 
-        </div>  
-    </main>
+<section>
+<h2> Sobre nosotros </h2>
+<button class="boton-accion" onclick="abrirVentana()">Saber más</button>
+</section>
+</div>
+</main>
 
-    <footer>
-        <p>&copy; 2026 GDVE21 </p>
-    </footer>
+<footer>
+<p>&copy; 2026 GDVE21 </p>
+</footer>
 
 </body>
 </html>
+
