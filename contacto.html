@@ -36,9 +36,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main class="contenedor">
 
         <h1>Contacto</h1>
-        <p>Puedes contactarme a través de este formulario (próximamente).</p>
-    
+       <form id="formulario-contacto" class="grupo-botones" action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre del Entrenador" required class="btn-pokemon" style="background: white; cursor: text; text-transform: none;">
+            
+            <input type="email" name="email" placeholder="Tu Email" required class="btn-pokemon" style="background: white; cursor: text; text-transform: none;">
+            
+            <textarea name="mensaje" placeholder="¿Qué carta buscas?" required class="btn-pokemon" style="background: white; cursor: text; text-transform: none; height: 100px; padding: 10px;"></textarea>
+            
+            <button type="submit" class="btn-pokemon">Enviar Formulario</button>
+        </form>
     </main>
-
 </body>
 </html>
