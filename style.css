@@ -24,9 +24,6 @@ nav {
     background-color: var(--rojo-pokemon);
     padding: 1rem;
     border-bottom: 5px solid var(--azul-oscuro);
-    display: flex;
-    justify-content: center;
-    gap: 30px;
 }
 
 nav a {
@@ -48,8 +45,8 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 80vh;
     text-align: center;
+    padding: 20px;
 }
 
 .grupo-botones {
