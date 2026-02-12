@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-  <html lang="es">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NUESTRO EVEE - Pokémon Cards</title>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUESTRO EVEE - Pokémon Cards</title>
 
-  <link rel="icon" type="image/png" href="favicon.png?v=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png?v=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-  <script src="at.js"></script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJNTRHHF');
+</script>
+<script src="at.js"></script>
+</head>
 
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WJNTRHHF');
-  </script>
-  </head>
+<body>
+<button onclick="abrirVentana()">Saber más</button>
 
-  <body>
-  <script>
+<div id="miVentanaEmergente" style="display: none;">
+<button onclick="cerrarVentana()">Cerrar</button>
+<p>Contenido adicional</p>
+</div>
 
-    function abrirVentana() {
-    var ventana = document.getElementById("miVentanaEmergente");
-    if(ventana) {
-    ventana.style.display = "block";
-  }
-  }
+<script>
+// Usamos funciones seguras que verifican si el elemento existe
+function abrirVentana() {
+const ventana = document.getElementById("miVentanaEmergente");
+if (ventana) ventana.style.display = "block";
+}
 
-      function cerrarVentana() {
-      var ventana = document.getElementById("miVentanaEmergente");
-  if(ventana) {
-      ventana.style.display = "none";
-    }
-    }
-  </script>
-  </body>
-  </html>
+function cerrarVentana() {
+const ventana = document.getElementById("miVentanaEmergente");
+if (ventana) ventana.style.display = "none";
+}
+</script>
+</body>
+</html>
 
