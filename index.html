@@ -1,76 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUESTRO EVEE - Pokémon Cards</title>
+  <html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUESTRO EVEE - Pokémon Cards</title>
 
-    <link rel="icon" type="image/png" href="favicon.png?v=1">
+  <link rel="icon" type="image/png" href="favicon.png?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <script src="at.js"></script>
 
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WJNTRHHF');
+  </script>
+  </head>
 
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WJNTRHHF');
-    </script>
-    <script src="at.js"></script>
-</head>
+  <body>
+  <script>
 
-<body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJNTRHHF"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    function abrirVentana() {
+    var ventana = document.getElementById("miVentanaEmergente");
+    if(ventana) {
+    ventana.style.display = "block";
+  }
+  }
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="cartas.html">Cartas</a></li>
-        </ul>
-    </nav>
-    
-    <main class="contenedor">
-        <section>
-            <h1>NUESTRO EVEE</h1>
-            <h2>Sobre nosotros</h2>
-            <h3>Nos dedicamos a la compra, venta y gradeo de cartas pokémon originales.</h3>
-            
-            <button class="btn-pokemon" onclick="abrirVentana()">Saber más</button>
-        </section>
-
-        <div id="miVentanaEmergente" class="card" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
-            <button class="cerrar" onclick="cerrarVentana()">X</button>
-            <div class="contenido">
-                <h2>Información adicional</h2>
-                <p>¿Quieres enviarnos tus cartas?</p>
-                <a href="contacto.html" class="btn-pokemon"> Ir a Contacto </a>
-            </div>  
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 GDVE21 </p>
-    </footer>
-
-    <script>
-        function abrirVentana() {
-            var ventana = document.getElementById("miVentanaEmergente");
-            if(ventana) {
-                ventana.style.display = "block";
-            }
-        }    
-
-        function cerrarVentana() {
-            var ventana = document.getElementById("miVentanaEmergente");
-            if(ventana) {
-                ventana.style.display = "none";
-            }
-        }
-    </script>
-</body> 
-</html>
+      function cerrarVentana() {
+      var ventana = document.getElementById("miVentanaEmergente");
+  if(ventana) {
+      ventana.style.display = "none";
+    }
+    }
+  </script>
+  </body>
+  </html>
 
