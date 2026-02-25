@@ -130,6 +130,9 @@ h2 {
     cursor: pointer;
     box-sizing: border-box;
     margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 button.btn-pokemon.btn-amarillo {
