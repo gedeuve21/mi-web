@@ -132,12 +132,13 @@ h2 {
     margin: 20px auto;
 } 
 
-.btn-amarillo {
+button.btn-pokemon.btn-amarillo {
     display: flex !important;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    line-height: normal !important;
 }
 
 .btn-pokemon:hover {
