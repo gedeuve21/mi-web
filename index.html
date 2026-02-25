@@ -24,22 +24,29 @@
 </nav>
 
 <main class="contenedor">
-  <section>
+  <section class="seccion-principal">
     <h1>NUESTRO EVEE</h1>
+
     <h2>Sobre nosotros</h2>
     <h3>Nos dedicamos a la compra, venta y gradeo de cartas pokémon originales.</h3>
 
-  <button class="btn-pokemon" id="btn-saber-mas" onclick="abrirVentana()">Saber más</button>
+    <button class="btn-pokemon" id="btn-saber-mas" onclick="abrirVentana()">Saber más</button>
+
+    <div class="botones-secundarios">
+      <button class="btn-pokemon btn-amarillo">VENDER</button>
+      <button class="btn-pokemon btn-amarillo">COMPRAR</button>
+      <button class="btn-pokemon btn-amarillo">GRADEAR</button>
+    </div>
   </section>
 
-<div id="miVentanaEmergente" class="card" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
-  <button class="cerrar" onclick="cerrarVentana()">X</button>
-<div class="contenido">
-  <h2>Información adicional</h2>
-<p>¿Quieres enviarnos tus cartas?</p>
-<a href="contacto.html" class="btn-pokemon"> Ir a Contacto </a>
-</div>
-</div>
+  <div id="miVentanaEmergente" class="card" style="display: none;">
+    <button class="cerrar" onclick="cerrarVentana()">X</button>
+    <div class="contenido">
+      <h2>Información adicional</h2>
+      <p>¿Quieres enviarnos tus cartas?</p>
+      <a href="contacto.html" class="btn-pokemon"> Ir a Contacto </a>
+    </div>
+  </div>
 </main>
 
 <script>
