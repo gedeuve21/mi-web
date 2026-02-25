@@ -139,6 +139,7 @@ button.btn-pokemon.btn-amarillo {
     text-align: center !important;
     padding: 0 !important;
     line-height: normal !important;
+    text-decoration: none;
 }
 
 .btn-pokemon:hover {
