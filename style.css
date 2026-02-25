@@ -25,6 +25,20 @@ nav {
     background-color: var(--rojo-pokemon);
     padding: 1rem;
     border-bottom: 5px solid var(--azul-oscuro);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline-block;
 }
 
 nav a {
@@ -33,10 +47,13 @@ nav a {
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 10px;
 }
 
 nav a:hover {
     color: var(--amarillo-pokemon);
+    background-color: rgba(0, 0, 0, 0.2);
     text-shadow: 2px 2px var(--azul-oscuro);
 }
 
@@ -189,7 +206,7 @@ footer {
 }
 
 input.btn-pokemon, textarea.btn-pokemon {
-   background: white !important;
+    background: white !important;
     text-transform: none;
     padding: 10px 15px;
     cursor: text;
