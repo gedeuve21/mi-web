@@ -124,7 +124,7 @@ h2 {
     font-size: 1.1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -132,6 +132,7 @@ h2 {
     height: 55px;
     cursor: pointer;
     box-sizing: border-box;
+    margin: 20px auto;
 }    
 
 .btn-pokemon:hover {
