@@ -297,3 +297,158 @@ input.btn-pokemon::placeholder, textarea.btn-pokemon::placeholder {
     transform: scale(1.05);
 }
 
+#cart-icon-container {
+    position: fixed;
+    top: 25px; 
+    right: 25px;
+    z-index: 2000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#cart-icon-container:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cart-circle {
+    background-color: var(--amarillo-pokemon);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--azul-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.emoji-cart {
+    font-size: 1.8rem;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--rojo-pokemon);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--negro-carbon);
+    border-left: 4px solid var(--azul-pokemon);
+    z-index: 3000;
+    transition: 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    display: flex;
+    flex-direction: column;
+    color: var(--blanco-nube);
+}
+
+.sidebar.open {
+    right: 0; 
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: var(--rojo-pokemon);
+    border-bottom: 4px solid var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-shadow: none; 
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#carrito-items-list {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.item-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.05);
+    border-top: 2px solid var(--azul-pokemon);
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--amarillo-pokemon);
+    margin-bottom: 15px;
+}
+
+.btn-checkout {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-continue {
+    background-color: transparent;
+    color: var(--blanco-nube);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--blanco-nube);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(3px);
+    z-index: 2500;
+}
+
+#cart-overlay.active {
+    display: block;
+}
