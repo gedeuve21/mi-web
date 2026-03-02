@@ -43,6 +43,7 @@
           <h4>Charizard Holo</h4>
           <p>Base Set</p>
           <span class="precio">450,00 €</span>
+          <button class="btn-comprar" data-nombre="Charizard Holo" data-precio="450">Comprar</button>
       </div>
     </div>
 
@@ -52,6 +53,7 @@
           <h4>Blastoise Holo</h4>
           <p>Base Set</p>
           <span class="precio">280,00 €</span>
+          <button class="btn-comprar" data-nombre="Blastoise Holo" data-precio="280">Comprar</button>
       </div>
     </div>
 
@@ -61,6 +63,7 @@
           <h4>M Lucario EX</h4>
           <p>XY-Furious Fists</p>
           <span class="precio">120,00 €</span>
+          <button class="btn-comprar" data-nombre="M Lucario EX" data-precio="120">Comprar</button>
       </div>
     </div>
   </div> 
@@ -90,6 +93,28 @@
   ventana.style.display = "none";
 }
 }
+
+let carrito = [];
+
+const botonesComprar = document.querySelectorAll('.btn-comprar');
+
+botonesComprar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const nombre = boton.getAttribute('data-nombre');
+        const precio = boton.getAttribute('data-precio');
+
+        const producto = {
+            nombre: nombre,
+            precio: parseFloat(precio)
+        };
+
+        carrito.push(producto);
+
+        alert(`¡${nombre} añadido al carrito! Total de items: ${carrito.length}`);
+        
+        console.log("Carrito actual:", carrito);
+    });
+});
 </script>
 
   <footer>
