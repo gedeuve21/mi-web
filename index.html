@@ -117,6 +117,19 @@ botonesComprar.forEach(boton => {
 });
 </script>
 
+<div id="cart-icon-container" onclick="toggleCarrito()">
+    <div class="cart-circle">
+        <span class="emoji-cart">🛒</span>
+        <span id="cart-count">0</span>
+    </div>
+</div>
+
+<div id="carrito-sidebar" class="sidebar">
+    </div>
+<div id="cart-overlay" onclick="toggleCarrito()"></div>
+
+<script src="js/carrito.js"></script>
+
   <footer>
     <p>&copy; 2026 GDVE21 </p>
   </footer>
