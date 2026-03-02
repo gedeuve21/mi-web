@@ -58,12 +58,12 @@
     </div>
 
     <div class="carta-item">
-        <img src="https://images.pokemontcg.io/xy3/55_hires.png" alt="Lucario">
+        <img src="https://images.pokemontcg.io/base1/10_hires.png" alt="Mewtwo">
         <div class="info-carta">
-          <h4>M Lucario EX</h4>
-          <p>XY-Furious Fists</p>
-          <span class="precio">120,00 €</span>
-          <button class="btn-comprar" data-nombre="M Lucario EX" data-precio="120">Comprar</button>
+          <h4>Mewtwo Holo</h4>
+          <p>Base Set</p>
+          <span class="precio">220,00 €</span>
+          <button class="btn-comprar" data-nombre="Mewtwo Holo" data-precio="220">Comprar</button>
       </div>
     </div>
   </div> 
@@ -80,41 +80,17 @@
 </main>
 
 <script>
+ 
   function abrirVentana() {
-  var ventana = document.getElementById("miVentanaEmergente");
-  if(ventana) {
-  ventana.style.display = "block";
-}
-}
+    var ventana = document.getElementById("miVentanaEmergente");
+    if(ventana) ventana.style.display = "block";
+  }
 
   function cerrarVentana() {
-  var ventana = document.getElementById("miVentanaEmergente");
-  if(ventana) {
-  ventana.style.display = "none";
-}
-}
-
-let carrito = [];
-
-const botonesComprar = document.querySelectorAll('.btn-comprar');
-
-botonesComprar.forEach(boton => {
-    boton.addEventListener('click', () => {
-        const nombre = boton.getAttribute('data-nombre');
-        const precio = boton.getAttribute('data-precio');
-
-        const producto = {
-            nombre: nombre,
-            precio: parseFloat(precio)
-        };
-
-        carrito.push(producto);
-
-        alert(`¡${nombre} añadido al carrito! Total de items: ${carrito.length}`);
-        
-        console.log("Carrito actual:", carrito);
-    });
-});
+    var ventana = document.getElementById("miVentanaEmergente");
+    if(ventana) ventana.style.display = "none";
+  }
+  
 </script>
 
 <div id="cart-icon-container" onclick="toggleCarrito()">
@@ -125,7 +101,21 @@ botonesComprar.forEach(boton => {
 </div>
 
 <div id="carrito-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Mi Carrito</h2>
+        <button class="btn-cerrar" onclick="toggleCarrito()">×</button>
     </div>
+    <div id="carrito-items-list">
+        </div>
+    <div class="sidebar-footer">
+        <div class="total-section">
+            <span>Total:</span>
+            <span id="total-amount">0.00 €</span>
+        </div>
+        <button class="btn-checkout">PAGAR</button>
+    </div>
+</div>
+
 <div id="cart-overlay" onclick="toggleCarrito()"></div>
 
 <script src="src/carrito.js"></script>
