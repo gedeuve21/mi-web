@@ -277,3 +277,22 @@ input.btn-pokemon, textarea.btn-pokemon {
 input.btn-pokemon::placeholder, textarea.btn-pokemon::placeholder {
     color: #888;
 }
+
+.btn-comprar {
+    background-color: #ffcb05;
+    color: #3b4cca; 
+    border: 2px solid #3b4cca;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    width: 100%; 
+}
+
+.btn-comprar:hover {
+    background-color: #3b4cca;
+    color: white;
+    transform: scale(1.05);
+}
