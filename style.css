@@ -386,7 +386,10 @@ input.btn-pokemon::placeholder, textarea.btn-pokemon::placeholder {
     cursor: pointer;
 }
 
-#carrito-items-list {
+#carrito-items-list button:hover {
+    color: white !important;
+    transform: scale(1.3);
+    transition: all 0.2s ease;
     flex: 1;
     padding: 20px;
     overflow-y: auto;
