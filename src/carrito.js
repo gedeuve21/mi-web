@@ -12,9 +12,7 @@
 
     window.eliminarDelCarrito = function(index) {
         carrito.splice(index, 1);
-
         localStorage.setItem('carritoSeptimaMedadlla', JSON.stringify(carrito));
-
         actualizarInterfaz();
     }
 
