@@ -122,9 +122,17 @@
         if (carrito.length === 0) return alert("El carrito está vacío.");
 
         if (typeof adobe !== 'undefined' && adobe.target) {
-    adobe.target.trackEvent({
+
+    adobe.target.getOffer({
         "mbox": "compra_click",
-        "params": { "pago_iniciado": "true" }
+        "params": { "pago_iniciado": "true" 
+        },
+        "success":function(offer) {
+    console.log('ok');
+        },
+        "error": function(status, error) {
+            console.log('Error', status, error);
+            }
         });
     }
 
