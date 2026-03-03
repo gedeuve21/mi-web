@@ -12,9 +12,9 @@
 
     window.eliminarDelCarrito = function(index) {
         carrito.splice(index, 1);
-        localStorage.setItem('carritoSeptimaMedadlla', JSON.stringify(carrito));
+        localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
         actualizarInterfaz();
-    }
+    };
 
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-comprar')) {
@@ -48,19 +48,24 @@
         if (lista) {
             lista.innerHTML = "";
             let total = 0;
-            
-            if (carrito.length === 0) {
-                lista.innerHTML = '<p style="padding:20px; color:#888;">El carrito está vacío.</p>';
-            } else {
-                carrito.forEach((prod) => {
-                    total += prod.precio;
-                    lista.innerHTML += `
-                        <div style="display:flex; justify-content:space-between; padding:10px; border-bottom:1px solid #444;">
-                            <span>${prod.nombre}</span>
+
+            carrito.forEach((prod, index) => {
+                total += prod.precio;
+                
+                lista.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid #444;">
+                        <div style="display:flex; flex-direction:column;">
+                            <span style="font-size: 0.9rem; color:white;">${prod.nombre}</span>
                             <strong style="color:#ffcb05">${prod.precio.toFixed(2)}€</strong>
-                        </div>`;
-                });
-            }
+                        </div>
+                        <button class="btn-borrar-item" 
+                                onclick="eliminarDelCarrito(${index})" 
+                                style="background:#ff4444; color:white; border:none; border-radius:4px; padding:5px 10px; cursor:pointer;">
+                            X
+                        </button>
+                    </div>`;
+            });
+
             if (totalElt) totalElt.innerText = total.toFixed(2) + " €";
         }
     }
