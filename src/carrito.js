@@ -1,9 +1,6 @@
-// Usamos un bloque para evitar conflictos de variables globales
 (function() {
-    // 1. Cargar datos iniciales
     let carrito = JSON.parse(localStorage.getItem('carritoSeptimaMedalla')) || [];
 
-    // 2. Función para abrir/cerrar (la hacemos global para el onclick del HTML)
     window.toggleCarrito = function() {
         const sidebar = document.getElementById('carrito-sidebar');
         const overlay = document.getElementById('cart-overlay');
@@ -13,7 +10,14 @@
         }
     };
 
-    // 3. Escuchar clics en los botones de comprar
+    window.eliminarDelCarrito = function(index) {
+        carrito.splice(index, 1);
+
+        localStorage.setItem('carritoSeptimaMedadlla', JSON.stringify(carrito));
+
+        actualizarInterfaz();
+    }
+
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-comprar')) {
             const nombre = e.target.getAttribute('data-nombre');
