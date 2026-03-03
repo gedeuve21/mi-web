@@ -60,7 +60,8 @@
                         </div>
                         <button class="btn-borrar-item" 
                                 onclick="eliminarDelCarrito(${index})" 
-                                style="background:#ff4444; color:white; border:none; border-radius:4px; padding:5px 10px; cursor:pointer;">
+                                style="background:#ff4444; color:white; border:none; border-radius:4px; padding:5px 10px; cursor:pointer; height: fit-content; align-self:center; line-height:1; 
+                                display:flex; align-items:center; justify-content:center;">
                             X
                         </button>
                     </div>`;
