@@ -187,4 +187,4 @@
 
     document.addEventListener('DOMContentLoaded', actualizarInterfaz);
     
-    })();
+    }});
