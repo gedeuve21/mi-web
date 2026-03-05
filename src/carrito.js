@@ -125,7 +125,7 @@
 
         if (typeof adobe !== 'undefined' && adobe.target) {
 
-    adobe.target.getOffer({
+   /* adobe.target.getOffer({
         "mbox": "compra_click",
         "params": { "pago_iniciado": "true" 
         },
@@ -136,7 +136,7 @@
             console.log('Error', status, error);
             }
         });
-    }
+    }*/
 
         alert("¡Gracias por tu compra en Séptima Medalla!");
 
