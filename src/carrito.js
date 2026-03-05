@@ -121,6 +121,8 @@
     function procesarPago() {
         if (carrito.length === 0) return alert("El carrito está vacío.");
 
+        localStorage.setItem('user_has_purchased', 'true');
+
         if (typeof adobe !== 'undefined' && adobe.target) {
 
     adobe.target.getOffer({
