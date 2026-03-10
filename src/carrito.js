@@ -134,7 +134,10 @@ function ejecutarFinalizacion() {
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
     
-    location.reload();
+    console.log("Esperando a adobe...");
+    setTimeout(()  => {
+        location.reload();
+    }, 2000);
 }
 
 function guardarYActualizar() {
