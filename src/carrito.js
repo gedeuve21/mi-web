@@ -126,12 +126,14 @@ function procesarPago() {
 
 function finalizarCompra() {
     alert("Compra realizada con exito!");
+
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
-    
-    setTimeout(()  => {
+
+    console.log("Sincronizando con adobe Target...")
+    setTimeout(() => {
         location.reload();
-    }, 3000);
+    }, 2000);
 }
 
 function guardarYActualizar() {
