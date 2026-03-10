@@ -102,26 +102,32 @@ function agregarAlCarrito(nombre, precio) {
     }
 }
 
-function procesarPago() {
+window.procesarPago = function() {
     if (carrito.length === 0) return alert("El carrito está vacío.");
 
     if (typeof adobe !== 'undefined' && adobe.target) {
+       
         adobe.target.trackEvent({
-            "mbox": "compra_click", 
+            "mbox": "compra_click",
             "params": {
-                "pago_iniciado": "true" 
+                "pago_iniciado": "true"
             },
             "success": function() {
-                console.log("Perfil marcado: pago_iniciado = true");
-                alert("¡Gracias por tu compra en Séptima Medalla!");
-                location.reload(); 
+                console.log("✅ Perfil marcado. Preparando recarga...");
+                
+                carrito = [];
+                localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
+
+                alert("¡Gracias por tu compra! Tu pedido se ha procesado.");
+
+                location.reload();
+            },
+            "error": function() {
+                alert("Error al conectar con el servidor de pagos.");
             }
         });
-    } else {
-        alert("¡Gracias por tu compra!");
-        location.reload();
     }
-}
+};
 
     alert("¡Gracias por tu compra en Séptima Medalla!");
 
