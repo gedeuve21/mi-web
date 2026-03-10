@@ -86,7 +86,6 @@ window.toggleCarrito = function() {
     }
 };
 
-
 window.eliminarDelCarrito = function(index) {
     carrito.splice(index, 1);
     guardarYActualizar();
@@ -97,44 +96,46 @@ function agregarAlCarrito(nombre, precio) {
     guardarYActualizar();
 
     const sidebar = document.getElementById('carrito-sidebar');
+  
     if (sidebar && !sidebar.classList.contains('open')) {
         window.toggleCarrito();
     }
 }
 
-window.procesarPago = function() {
-    if (carrito.length === 0) return alert("El carrito está vacío.");
+function procesarPago() {
+    if (carrito.length === 0) {
+        alert("Aún no has elegido ninguna carta.");
+        return;
+    }
 
     if (typeof adobe !== 'undefined' && adobe.target) {
-       
         adobe.target.trackEvent({
             "mbox": "compra_click",
             "params": {
                 "pago_iniciado": "true"
             },
             "success": function() {
-                console.log("✅ Perfil marcado. Preparando recarga...");
-                
-                carrito = [];
-                localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
-
-                alert("¡Gracias por tu compra! Tu pedido se ha procesado.");
-
-                location.reload();
+                console.log("Perfil marcado en Target");
+                ejecutarFinalizacion();
             },
             "error": function() {
-                alert("Error al conectar con el servidor de pagos.");
+                console.log("Error al marcar perfil, procediendo igual...");
+                ejecutarFinalizacion();
             }
         });
+    } else {
+        ejecutarFinalizacion();
     }
-};
+}
 
-    alert("¡Gracias por tu compra en Séptima Medalla!");
+function ejecutarFinalizacion() {
+    alert("¡Gracias por tu compra en Séptima Medalla! Prepárate para el duelo.");
 
     carrito = [];
-    guardarYActualizar();
-    window.toggleCarrito();
-
+    localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
+    
+    location.reload();
+}
 
 function guardarYActualizar() {
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
@@ -157,7 +158,6 @@ function actualizarInterfaz() {
         } else {
             carrito.forEach((prod, index) => {
                 total += prod.precio;
-              
                 lista.innerHTML += `
                     <div class="item-fila" style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
                         <div style="display: flex; flex-direction: column; text-align: left;">
@@ -171,17 +171,14 @@ function actualizarInterfaz() {
                     </div>`;
             });
         }
-        
         if (totalElt) totalElt.innerText = total.toFixed(2) + " €";
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
- 
     actualizarInterfaz();
 
     document.addEventListener('click', (e) => {
-     
         if (e.target.classList.contains('btn-comprar')) {
             const nombre = e.target.getAttribute('data-nombre');
             const precio = parseFloat(e.target.getAttribute('data-precio'));
@@ -191,14 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (e.target.classList.contains('btn-checkout')) {
-            if (carrito.length === 0) {
-                alert("Aún no has elegido ninguna carta.");
-            } else {
-                alert("¡Compra realizada con éxito! Prepárate para el duelo.");
-                carrito = [];
-                guardarYActualizar();
-                window.toggleCarrito();
-            }
+            procesarPago(); 
         }
     });
 });
