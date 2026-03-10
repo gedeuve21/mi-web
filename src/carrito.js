@@ -104,7 +104,7 @@ function agregarAlCarrito(nombre, precio) {
 
 function procesarPago() {
     if (carrito.length === 0) {
-        alert("Aún no has elegido ninguna carta.");
+        alert("El carrito está vacío.");
         return;
     }
 
@@ -112,32 +112,26 @@ function procesarPago() {
         adobe.target.trackEvent({
             "mbox": "compra_click",
             "params": {
-                "pago_iniciado": "true"
-            },
+                "pago_iniciado": "true"},
+
             "success": function() {
-                console.log("Perfil marcado en Target");
-                ejecutarFinalizacion();
+                console.log("Señal enviada. Esperando sincronización...");
+                finalizarCompra();
             },
-            "error": function() {
-                console.log("Error al marcar perfil, procediendo igual...");
-                ejecutarFinalizacion();
+            "error": function() { finalizarCompra(); 
             }
         });
-    } else {
-        ejecutarFinalizacion();
     }
 }
 
-function ejecutarFinalizacion() {
-    alert("¡Gracias por tu compra en Séptima Medalla! Prepárate para el duelo.");
-
+function finalizarCompra() {
+    alert("Compra realizada con exito!");
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
     
-    console.log("Esperando a adobe...");
     setTimeout(()  => {
         location.reload();
-    }, 2000);
+    }, 3000);
 }
 
 function guardarYActualizar() {
