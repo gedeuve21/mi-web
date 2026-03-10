@@ -112,15 +112,20 @@ function procesarPago() {
         adobe.target.trackEvent({
             "mbox": "compra_click",
             "params": {
-                "pago_iniciado": "true"},
-
+                "pago_iniciado": "true"
+            },
             "success": function() {
                 console.log("Señal enviada. Esperando sincronización...");
                 finalizarCompra();
             },
-            "error": function() { finalizarCompra(); 
+            "error": function() {
+                console.log("Error en trackEvent, finalizando igual...");
+                finalizarCompra(); 
             }
         });
+    } else {
+        console.log("Adobe Target no detectado, finalizando compra directa...");
+        finalizarCompra;
     }
 }
 
