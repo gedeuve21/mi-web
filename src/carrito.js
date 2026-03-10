@@ -106,30 +106,29 @@ function procesarPago() {
     if (carrito.length === 0) return alert("El carrito está vacío.");
 
     if (typeof adobe !== 'undefined' && adobe.target) {
-        adobe.target.getOffer({
+        adobe.target.trackEvent({
             "mbox": "compra_click", 
             "params": {
-                "pago_iniciado": "true"
+                "pago_iniciado": "true" 
             },
-            "success": function(offer) {
-                adobe.target.applyOffer({
-                    "mbox": "compra_click",
-                    "offer": offer
-                });
-                console.log("Perfil de comprador actualizado en Target.");
-            },
-            "error": function(status, error) {
-                console.error("Error al notificar a Target:", status, error);
+            "success": function() {
+                console.log("Perfil marcado: pago_iniciado = true");
+                alert("¡Gracias por tu compra en Séptima Medalla!");
+                location.reload(); 
             }
         });
+    } else {
+        alert("¡Gracias por tu compra!");
+        location.reload();
     }
+}
 
     alert("¡Gracias por tu compra en Séptima Medalla!");
 
     carrito = [];
     guardarYActualizar();
     window.toggleCarrito();
-}
+
 
 function guardarYActualizar() {
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
