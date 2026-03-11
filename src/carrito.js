@@ -130,12 +130,13 @@ function procesarPago() {
 }
 
 function finalizarCompra() {
-    alert("Compra realizada con exito!");
+    localStorage.setItem('user_has_purchased', 'true');
+    
+    alert("¡Compra realizada con éxito!");
 
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
 
-    console.log("Sincronizando con adobe Target...")
     setTimeout(() => {
         location.reload();
     }, 2000);
