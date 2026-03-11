@@ -130,9 +130,15 @@ function procesarPago() {
 }
 
 function finalizarCompra() {
+
+    let contador = parseInt(localStorage.getItem('contador_compras')) || 0;
+
+    contador++;
+    localStorage.setItem('contador_compras', contador);
+
     localStorage.setItem('user_has_purchased', 'true');
     
-    alert("¡Compra realizada con éxito!");
+    alert("¡Compra realizada con éxito! Esta es tu compra numero " + contador);
 
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
