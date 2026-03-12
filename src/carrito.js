@@ -148,7 +148,7 @@ function procesarPago() {
     }, 2000);
 } */
 
-function finalizarCompra () {
+/* function finalizarCompra () {
 
     localStorage.setItem('premio_proxima_visita', 'true');
 
@@ -158,7 +158,20 @@ function finalizarCompra () {
     setTimeout(() => {
         location.reload();
     }, 2000);
-}
+} */
+
+function finalizarCompra () {
+
+    localStorage.setItem('premio_proxima_visita', 'true');
+
+    localStorage.removeItem('veces_visto');
+
+    localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
+
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
+}     
 
 function guardarYActualizar() {
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
