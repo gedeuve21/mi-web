@@ -138,7 +138,7 @@ function finalizarCompra() {
 
     localStorage.setItem('user_has_purchased', 'true');
     
-    alert("¡Compra realizada con éxito! Esta es tu compra numero " + contador);
+    alert("¡Compra realizada con éxito! Esta es tu compra número " + contador + "!");
 
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
