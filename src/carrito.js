@@ -129,7 +129,7 @@ function procesarPago() {
     }
 }
 
-function finalizarCompra() {
+/* function finalizarCompra() {
 
     let contador = parseInt(localStorage.getItem('contador_compras')) || 0;
 
@@ -139,6 +139,18 @@ function finalizarCompra() {
     localStorage.setItem('user_has_purchased', 'true');
     
     alert("¡Compra realizada con éxito! Esta es tu compra número " + contador + "!");
+
+    carrito = [];
+    localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
+
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
+} */
+
+function finalizarCompra () {
+
+    localStorage.setItem('premio_proxima_visita', 'true');
 
     carrito = [];
     localStorage.setItem('carritoSeptimaMedalla', JSON.stringify(carrito));
