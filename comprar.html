@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width",initial-scale=1.0">
+    <title>Comprar - SÉPTIMA MEDALLA</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+     <nav>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cartas.html">Cartas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenedor">
+        <header>
+            <h1> Catálogo de Cartas</h1>
+            <p> Selecciona las cartas que quieras añadir a tu colección. </p>
+        </header>
+
+        <section class="opciones-grid">
+            <div class="card-item">
+                <img src="img/carta1.jpg" alt="Carta Pokemon" style="width: 100%; border-radius: 10px;">
+                <h3> Charizard Base Set </h3>
+                <p>Precio: 450,00 € </p>
+                <button class="btn-pokemon" onclick="agregarAlCarrito('Charizard' , 450)">Añadir</button>
+            </div>
+        </main>
+
+    <script src="src/carrito.js"></script>
+    
+    <footer>
+        <p>&copy; 2026 GDVE21</p>
+    </footer>
+</body>
+</html>
