@@ -33,6 +33,33 @@
             </div>  
         </main>
 
+        <div id="cart-icon-container" onclick="toggleCarrito()">
+    <div class="cart-circle">
+        <span class="emoji-cart">🛒</span>
+        <span id="cart-count">0</span>
+    </div>
+</div>
+
+<div id="carrito-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Mi Carrito</h2>
+        <button class="btn-cerrar" onclick="toggleCarrito()">×</button>
+    </div>
+    <div id="carrito-items-list">
+        </div>
+    <div class="sidebar-footer">
+        <div class="total-section">
+            <span>Total:</span>
+            <span id="total-amount">0.00 €</span>
+        </div>
+        <button class="btn-checkout">PAGAR</button>
+    </div>
+</div>
+
+<div id="cart-overlay" onclick="toggleCarrito()"></div>
+
+<script src="src/carrito.js"></script>
+
     <script src="src/carrito.js"></script>
     
     <footer>
