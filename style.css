@@ -232,7 +232,7 @@ input.btn-pokemon, textarea.btn-pokemon {
 .grid-cartas 
 .contenedor-cartas,
 .seccion-tienda .grid {
-    display: grid !important;
+    display: flex !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 10px;
     padding: 10px;
