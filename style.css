@@ -238,6 +238,10 @@ input.btn-pokemon, textarea.btn-pokemon {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .carta-item
