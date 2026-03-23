@@ -173,14 +173,13 @@
     
     <script>
     const cards3D =
-    document.querySelectorAll('.carta-item-3d');
+    document.querySelectorAll('.carta-imagen-3d');
     
     cards3D.forEach(card =>  {
-        const card3D = container.querySelector('.carta-imagen-3d');
 
-          if (card3D) {
+        if (card3D) {
 
-          container.addEventListener('mousemove' , (e) => {
+          card.addEventListener('mousemove' , (e) => {
             const rect = card.getBoundingClientRect();
 
             const x = e.clientX - rect.left;
@@ -194,6 +193,10 @@
             const deltaX = (x - centerX) / centerX;
 
             const deltaY = (centerY - y) / centerY;
+
+            const powerX = Math.pow(deltaY, 3);
+
+            const powerY = Math.pow(deltaX, 3);
 
             const rotateX = powerX * 30;
 
