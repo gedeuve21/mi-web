@@ -242,6 +242,7 @@ input.btn-pokemon, textarea.btn-pokemon {
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    justify-items: center;
 }
 
 .carta-item
