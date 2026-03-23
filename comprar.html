@@ -191,11 +191,15 @@
 
             const centerY = rect.height / 2;
 
-            const rotateX = (centerY - y) / 15;
+            const deltaX = (x - centerX) / centerX;
 
-            const rotateY = (centerX) / 10;
+            const deltaY = (centerY - y) / centerY;
 
-            card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.05)`; });
+            const rotateX = Math.pow(deltaY, 3) * 30;
+
+            const rotateY = Math.pow(deltaX, 3) * 30;
+
+            card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.08)`; });
 
             container.addEventListener('mouseleave', () => {
                 card3D.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
