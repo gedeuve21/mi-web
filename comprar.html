@@ -172,16 +172,16 @@
     </footer>
     
     <script>
-    const cardContainers =
-    document.querySelectorAll('.carta-item');
+    const cards3D =
+    document.querySelectorAll('.carta-item-3d');
     
-    cardContainers.forEach(container=>  {
+    cards3D.forEach(card =>  {
         const card3D = container.querySelector('.carta-imagen-3d');
 
           if (card3D) {
 
           container.addEventListener('mousemove' , (e) => {
-            const rect = container.getBoundingClientRect();
+            const rect = card.getBoundingClientRect();
 
             const x = e.clientX - rect.left;
 
@@ -195,14 +195,14 @@
 
             const deltaY = (centerY - y) / centerY;
 
-            const rotateX = Math.pow(deltaY, 3) * 30;
+            const rotateX = powerX * 30;
 
-            const rotateY = Math.pow(deltaX, 3) * 30;
+            const rotateY = powerY * 30;
 
-            card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.08)`; });
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.08)`; });
 
-            container.addEventListener('mouseleave', () => {
-                card3D.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
             });
           }
         });    
