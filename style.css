@@ -65,6 +65,7 @@ nav a:hover {
     flex-direction: column;
     text-align: center;
     padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grupo-botones {
