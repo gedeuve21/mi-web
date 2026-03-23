@@ -178,6 +178,9 @@ button.btn-pokemon.btn-amarillo {
     min-height: 60vh;
     grid-template-columns: repeat(3, 1fr) !important;
     padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .modal {
@@ -281,6 +284,13 @@ input.btn-pokemon, textarea.btn-pokemon {
     margin: 0;
     transition: transform 0.1s ease-out;
     transform-style: preserve-3d;
+    display: block;
+}
+
+.carta-imagen-3d img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .info-carta {
