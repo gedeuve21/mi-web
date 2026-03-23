@@ -170,7 +170,7 @@ button.btn-pokemon.btn-amarillo {
 }
 
 .opciones-grid {
-    display: flex;
+    display: grid !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
