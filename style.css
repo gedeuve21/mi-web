@@ -177,6 +177,7 @@ button.btn-pokemon.btn-amarillo {
     gap: 20px;
     min-height: 60vh;
     grid-template-columns: repeat(3, 1fr) !important;
+    padding: 20px;
 }
 
 .modal {

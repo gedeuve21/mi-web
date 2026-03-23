@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="at.js"></script>
 
 </head>
 <body>
@@ -190,11 +191,11 @@
 
             const centerY = rect.height / 2;
 
-            const rotateX = (centerY - y) / 20;
+            const rotateX = (centerY - y) / 15;
 
-            const rotateY = (centerX) / 20;
+            const rotateY = (centerX) / 15;
 
-            card3D.style.transform = `rotateX($ {rotateX}deg) rotateY(${rotateY}deg)scale(1.05)`; });
+            card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.05)`; });
 
             container.addEventListener('mouseleave', () => {
                 card3D.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
