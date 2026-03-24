@@ -39,8 +39,11 @@
     <div class="grid-cartas">
       
       <div class="carta-item">
-        <img src="https://images.pokemontcg.io/base1/4_hires.png" alt="Charizard">
-        <div class="info-carta">
+        <div class="carta-imagen-3d">
+          <img src="https://images.pokemontcg.io/base1/4_hires.png" alt="Charizard">
+        </div>  
+        
+      <div class="info-carta">  
           <h4>Charizard Holo</h4>
           <p>Base Set</p>
           <span class="precio">450,00 €</span>
@@ -49,7 +52,10 @@
     </div>
 
     <div class="carta-item">
-        <img src="https://images.pokemontcg.io/base1/2_hires.png" alt="Blastoise">
+        <div class="carta-imagen-3d"></div>
+          <img src="https://images.pokemontcg.io/base1/2_hires.png" alt="Blastoise">
+        </div>
+
         <div class="info-carta">
           <h4>Blastoise Holo</h4>
           <p>Base Set</p>
@@ -59,7 +65,10 @@
     </div>
 
     <div class="carta-item">
+      <div class="carta-imagen-3d"></div>
         <img src="https://images.pokemontcg.io/base1/10_hires.png" alt="Mewtwo">
+        </div>
+
         <div class="info-carta">
           <h4>Mewtwo Holo</h4>
           <p>Base Set</p>
@@ -67,6 +76,7 @@
           <button class="btn-comprar" data-nombre="Mewtwo Holo" data-precio="220">Comprar</button>
       </div>
     </div>
+
   </div> 
   </section>
 
@@ -124,13 +134,15 @@
   <footer>
     <p>&copy; 2026 GDVE21 </p>
   </footer>
-
-   <script>
-    const cards =
-    document.querySelectorAll('.carta-item');
+<script>
+    const cards3D =
+    document.querySelectorAll('.carta-imagen-3d');
     
-    cards.forEach(card=>  {
-        card.addEventListener('mousemove', (e) => {
+    cards3D.forEach(card =>  {
+
+        if (cards3D) {
+
+          card.addEventListener('mousemove' , (e) => {
             const rect = card.getBoundingClientRect();
 
             const x = e.clientX - rect.left;
@@ -141,17 +153,27 @@
 
             const centerY = rect.height / 2;
 
-            const rotateX = (centerY - y) / 10;
+            const deltaX = (x - centerX) / centerX;
 
-            const rotateY = (centerX - x) / 10;
+            const deltaY = (centerY - y) / centerY;
 
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`; });
+            const powerX = Math.pow(deltaY, 3);
+
+            const powerY = Math.pow(deltaX, 3);
+
+            const rotateX = powerX * 30;
+
+            const rotateY = powerY * 30;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)scale(1.08)`; });
 
             card.addEventListener('mouseleave', () => {
-                card.style.transform = `rotateX(0deg) rotateY (0deg) scale(1)`;
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
             });
-        });
-    </script>    
+          }
+        });    
+
+    </script> 
 
 </body>
 </html>
