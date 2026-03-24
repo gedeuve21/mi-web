@@ -91,6 +91,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 300px;
+    display: flex;
 
 }
 
