@@ -66,6 +66,7 @@ nav a:hover {
     text-align: center;
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
 
 }
 
