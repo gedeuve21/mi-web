@@ -247,7 +247,7 @@ input.btn-pokemon, textarea.btn-pokemon {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
     justify-items: center;
     perspective: 1000px;
@@ -268,7 +268,7 @@ input.btn-pokemon, textarea.btn-pokemon {
     justify-content: space-between;
     height: 100%;
     perspective: 1000px;
-    width: fit-content;
+    width: 100%;
     margin-bottom: 15px;
     max-width: none !important;
     transition: transform 0.1s ease-out;
